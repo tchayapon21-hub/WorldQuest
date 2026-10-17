@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordQuest – เรียนอังกฤษสนุก CEFR & IELTS (ฟรี)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <header class="topbar">
+    <button class="brand" id="homeBtn">🚀 WordQuest</button>
+    <div class="stats">
+      <span class="pill" id="streakPill" title="เรียนติดต่อกัน (วัน)">🔥 0</span>
+      <span class="pill" id="comboPill" title="คอมโบ">⚡ x0</span>
+      <button class="pill" id="soundBtn" title="เปิด/ปิดเสียง">🔊</button>
+    </div>
+  </header>
+
+  <section class="rankbar">
+    <div class="rank-info">
+      <span id="rankEmoji" class="rank-emoji">🥚</span>
+      <div>
+        <div class="rank-label">แรงก์รวม</div>
+        <div id="rankName" class="rank-name"></div>
+        <div id="rankNext" class="rank-next"></div>
+      </div>
+      <div class="total-xp" id="totalXP"></div>
+    </div>
+    <div class="bar big"><div class="fill" id="rankFill"></div></div>
+    <div class="daily">
+      <span>🎯 เป้าวันนี้</span>
+      <div class="bar small"><div class="fill daily-fill" id="dailyFill"></div></div>
+      <span id="dailyText"></span>
+    </div>
+  </section>
+
+  <main id="app"></main>
+
+  <footer style="width:min(960px,calc(100% - 24px));margin:30px auto 0;text-align:center;color:rgba(255,255,255,.75);font-size:.75rem;line-height:1.6">
+    WordQuest · ใช้ฟรี 100% ไม่มีโฆษณา ไม่ต้องสมัคร · ความคืบหน้าเก็บในเบราว์เซอร์ของคุณเท่านั้น<br>
+    IELTS เป็นเครื่องหมายการค้าของเจ้าของสิทธิ์ เว็บนี้ไม่มีส่วนเกี่ยวข้องหรือได้รับการรับรองจาก IELTS อย่างเป็นทางการ
+  </footer>
+
+  <div id="toastWrap"></div>
+  <div id="modal" class="modal hidden"><div class="modal-box" id="modalBox"></div></div>
+
+  <script src="data.js"></script>
+  <script src="data-extra.js"></script>
+  <script src="reading.js"></script>
+  <script src="app.js"></script>
+  <script src="grammar.js"></script>
+</body>
+</html>
